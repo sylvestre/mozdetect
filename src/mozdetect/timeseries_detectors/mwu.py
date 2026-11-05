@@ -54,7 +54,7 @@ from mozdetect.detectors.mwu import (
     PVALUE_THRESHOLD,
     MWUDetector,
 )
-from mozdetect.mwu_stats import mann_whitney_u
+from mozdetect.helpers.mwu_stats import mann_whitney_u
 from mozdetect.timeseries_detectors.base import BaseTimeSeriesDetector
 from mozdetect.timeseries_detectors.detection import Detection
 

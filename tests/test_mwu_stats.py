@@ -1,7 +1,7 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
-"""Checks on the PerfCompare port in mozdetect.mwu_stats.
+"""Checks on the PerfCompare port in mozdetect.helpers.mwu_stats.
 
 The expected values for the ported routines were produced by running
 PerfCompare's own JavaScript (src/utils/bootstrap-ci.ts and
@@ -14,7 +14,7 @@ import pytest
 
 from scipy.stats import mannwhitneyu
 
-from mozdetect.mwu_stats import (
+from mozdetect.helpers.mwu_stats import (
     SW_NORMALITY_THRESHOLD,
     bootstrap_median_diff_ci,
     check_distribution_normality,

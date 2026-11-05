@@ -16,11 +16,11 @@ non-parametric measures rather than a single t-test:
 
 Only when the difference is both significant *and* meaningful does PerfCompare
 report an improvement or a regression; everything else is "no change" (noise).
-Every statistic comes from `mozdetect.mwu_stats`, a port of PerfCompare's own
-implementations, so the numbers here agree with what PerfCompare shows for the
-same data. Where the two part company is how much evidence they ask for before
-calling a change: see PVALUE_THRESHOLD and CLIFFS_DELTA_THRESHOLD, both
-tightened for unattended detection.
+Every statistic comes from `mozdetect.helpers.mwu_stats`, a port of
+PerfCompare's own implementations, so the numbers here agree with what
+PerfCompare shows for the same data. Where the two part company is how much
+evidence they ask for before calling a change: see PVALUE_THRESHOLD and
+CLIFFS_DELTA_THRESHOLD, both tightened for unattended detection.
 
 This is the comparison alone, registered as the `ci` detector `mwu` and
 reached with `mozdetect.get_detectors("ci")["mwu"]`. The technique that walks
@@ -32,7 +32,7 @@ import pandas
 
 from dataclasses import asdict, dataclass
 
-from mozdetect import mwu_stats
+from mozdetect.helpers import mwu_stats
 from mozdetect.detectors.base import BaseDetector
 
 # Mann-Whitney U p-value at or below which the two samples are considered to

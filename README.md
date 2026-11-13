@@ -1,6 +1,8 @@
 # mozdetect
 A python package containing change point detection techniques for use at Mozilla.
 
+Live: https://perf-labs.netlify.app/
+
 # Setup, and Development
 
 ## Setup
